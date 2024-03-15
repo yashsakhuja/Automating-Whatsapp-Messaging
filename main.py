@@ -11,8 +11,6 @@ screen_height= win.winfo_screenheight() # Gets the resolution (height) of your m
 # Function to schedule message
 def schedule_message(phone_number, message, scheduled_time,screen_width,screen_height):
             pywhatkit.sendwhatmsg(phone_number, message, scheduled_time.hour, scheduled_time.minute)
-            pyautogui.moveTo(screen_width * 0.694, screen_height* 0.964) # Moves the cursor the the message bar in Whatsapp
-            pyautogui.click() # Clicks the bar
             pyautogui.press('enter') # Sends the message
 
 sched_time=datetime.datetime(2024, 3, 15, 21, 14,0)
